@@ -15,18 +15,26 @@
       href="{{ url_for('static', filename='css/master.css')}}"
     />
     {% if custom_css %}
-        <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='css/' + custom_css + '.css')}}"
-        />
-    {% endif %} 
-    <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/' + custom_css + '.css')}}"
+    />
+    {% endif %}
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     {% if custom_css %}
     <div>{{ custom_css}}</div>
     {% endif %} 
-    {{ test }}
+    {{ test }} <br/>
+
+    <a href="/">Home</a>
+    <a href="/skills">skills</a>
+    <a href="/about">about</a>
     <br />
     {% block body %} {% endblock %}
 
